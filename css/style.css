@@ -16,6 +16,7 @@ h3 = 1.953rem
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
