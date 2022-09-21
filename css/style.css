@@ -93,13 +93,27 @@ em {
 .btn,
 .btn:link,
 .btn:visited {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   padding: 2rem 4rem;
   text-transform: uppercase;
   font-weight: 500;
   background: transparent;
   transition: all 0.3s;
   text-decoration: none;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.btn.btn--white {
+  box-shadow: inset 0 0 0 2px #fff;
+  color: #fff;
+}
+
+.btn.btn--orange {
+  box-shadow: inset 0 0 0 2px #f36c2a;
+  color: #f36c2a;
 }
 
 /*Paragraphs*/
@@ -197,6 +211,10 @@ a:active {
   color: #fff;
 }
 
+.navLogo span {
+  display: block;
+}
+
 /*Main Menu*/
 
 .navMenu {
@@ -221,6 +239,7 @@ a:active {
 
 .navMenuMobile .icon {
   display: none;
+  font-size: 2.4rem;
 }
 
 /*Section Hero*/
@@ -240,17 +259,6 @@ a:active {
 
 .section.hero span {
   display: block;
-}
-
-.section.hero .btn:link,
-.section.hero .btn:visited {
-  box-shadow: inset 0 0 0 2px #fff;
-  color: #fff;
-}
-
-.section.hero .btn:hover,
-.section.hero .btn:active {
-  background-color: rgba(255, 255, 255, 0.1);
 }
 
 /*Main Content*/
@@ -287,16 +295,6 @@ a:active {
 
 /*Section About*/
 
-.section.about .btn:link,
-.section.about .btn:visited {
-  box-shadow: inset 0 0 0 2px #f36c2a;
-}
-
-.section.about .btn:hover,
-.section.about .btn:active {
-  background-color: rgb(243, 108, 42, 0.1);
-}
-
 /*Section Principles*/
 
 .section.principles {
@@ -320,15 +318,6 @@ a:active {
   text-align: center;
 }
 
-.section.principles .btn {
-  box-shadow: inset 0 0 0 2px #f36c2a;
-}
-
-.section.principles .btn:hover,
-.section.principles .btn:active {
-  background-color: rgb(243, 108, 42, 0.1);
-}
-
 /*Section How It Works*/
 
 .section.howItWorks .sectionHeading {
@@ -337,6 +326,7 @@ a:active {
 }
 
 .section.howItWorks .cards {
+  display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 4rem;
 }
@@ -358,11 +348,14 @@ a:active {
   gap: 3rem;
 }
 
+.contactForm input {
+  padding: 1rem 2rem;
+}
+
 .contactForm input,
 .contactForm textarea {
   border: 2px solid rgba(255, 255, 255, 0.5);
   background: transparent;
-  padding: 1rem 2rem;
   outline: none;
   color: #fff;
   font-size: 1.6rem;
@@ -412,10 +405,6 @@ a:active {
   cursor: pointer;
 }
 
-.contactForm .btn:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
 /*Main Footer*/
 
 .mainFooter {
@@ -442,9 +431,9 @@ a:active {
   .navMenuMobile .icon {
     display: inline-block;
     color: #fff;
-    font-size: inherit;
   }
-  .section.principles .cards {
+  .section.principles .cards,
+  .section.howItWorks .cards {
     grid-template-columns: 1fr;
     gap: 4rem;
   }
@@ -454,5 +443,33 @@ a:active {
   }
   .cardHeading {
     text-align: left;
+  }
+}
+
+@media (max-width: 740px) {
+  .contactForm .userInfo {
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+  .contactForm .userInfo .name,
+  .contactForm .userInfo .email {
+    width: 100%;
+  }
+  .cardHeading {
+    text-align: center;
+  }
+  .cardContent {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 440px) {
+  .btn,
+  .btn:link,
+  .btn:visited {
+    display: flex;
+  }
+  .contactForm .btn {
+    width: 100%;
   }
 }
