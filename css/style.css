@@ -104,6 +104,7 @@ em {
   text-decoration: none;
   text-align: center;
   line-height: 1.5;
+  cursor: pointer;
 }
 
 .btn.btn--white {
@@ -345,64 +346,56 @@ a:active {
 .contactForm {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 4rem;
 }
 
-.contactForm input {
-  padding: 1rem 2rem;
-}
-
-.contactForm input,
-.contactForm textarea {
-  border: 2px solid rgba(255, 255, 255, 0.5);
-  background: transparent;
-  outline: none;
+.contactForm label {
+  display: block;
+  text-transform: uppercase;
   color: #fff;
-  font-size: 1.6rem;
-  font-family: "Roboto", sans-serif;
-}
-
-.contactForm textarea {
-  resize: none;
-}
-
-.contactForm input:focus,
-.contactForm textarea:focus {
-  border-color: #fff;
+  font-weight: 600;
 }
 
 .contactForm fieldset {
   border: none;
+  width: 100%;
 }
 
-.contactForm label {
-  color: #fff;
-  font-weight: 500;
-  text-transform: uppercase;
-}
-
-.contactForm .userInfo {
+.formInfoBox {
   display: flex;
-  justify-content: space-between;
-  gap: 3rem;
+  gap: 4rem;
 }
 
-.name,
-.email,
-.subject,
-.msgBody {
+.formInfo {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
-.name,
-.email {
-  width: 50%;
+.formInfo input,
+.formInfo textarea {
+  width: 100%;
+  font-size: inherit;
+  color: #fff;
+  border: 0.4rem solid rgba(255, 255, 255, 0.25);
+  outline: 0;
+  background-color: transparent;
+  padding: 1rem 2rem;
+}
+
+.formInfo input:focus,
+.formInfo textarea:focus {
+  border-color: #fff;
+  box-shadow: 0 0 0 1px #ffffff;
 }
 
 .contactForm .btn {
-  cursor: pointer;
+  align-self: flex-start;
+  border: none;
+  box-shadow: inset 0 0 0 2px #fff;
+  font-family: "Roboto", sans-serif;
+  font-size: inherit;
+  color: #fff;
 }
 
 /*Main Footer*/
@@ -447,18 +440,13 @@ a:active {
 }
 
 @media (max-width: 740px) {
-  .contactForm .userInfo {
-    justify-content: flex-start;
-    flex-direction: column;
-  }
-  .contactForm .userInfo .name,
-  .contactForm .userInfo .email {
-    width: 100%;
-  }
   .cardHeading {
     text-align: center;
   }
   .cardContent {
+    flex-direction: column;
+  }
+  .formInfoBox {
     flex-direction: column;
   }
 }
@@ -470,6 +458,6 @@ a:active {
     display: flex;
   }
   .contactForm .btn {
-    width: 100%;
+    align-self: normal;
   }
 }

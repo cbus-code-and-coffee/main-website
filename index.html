@@ -254,37 +254,30 @@
           <header class="sectionHeader">
             <h2 class="sectionHeading">Get In Touch</h2>
           </header>
-          <form action="" class="contactForm">
-            <fieldset class="userInfo">
-              <fieldset class="name">
+          <form class="contactForm" action="">
+            <fieldset class="formInfoBox">
+              <fieldset class="formInfo">
                 <label for="name">Name</label>
-                <input type="text" name="name" id="name" />
+                <input type="text" name="name" />
               </fieldset>
-
-              <fieldset class="email">
+              <fieldset class="formInfo">
                 <label for="email">Email</label>
-                <input type="email" name="email" id="email" />
+                <input type="email" name="email" />
               </fieldset>
             </fieldset>
-
-            <fieldset class="subject">
-              <label for="subject">Subject</label>
-              <input type="text" name="subject" id="subject" />
+            <fieldset class="formInfoBox">
+              <fieldset class="formInfo">
+                <label for="subject">Subject</label>
+                <input type="text" name="subject" />
+              </fieldset>
             </fieldset>
-
-            <fieldset class="msgBody">
-              <label for="msgBody">Message</label>
-              <textarea
-                name="msgBody"
-                id="msgBody"
-                cols="30"
-                rows="10"
-              ></textarea>
+            <fieldset class="formInfoBox">
+              <fieldset class="formInfo">
+                <label for="msg">Message</label>
+                <textarea name="msg" id="msg" cols="30" rows="10"></textarea>
+              </fieldset>
             </fieldset>
-
-            <fieldset class="actions textLeft">
-              <input class="btn" type="submit" value="Send Message" />
-            </fieldset>
+            <button class="btn">Send Message</button>
           </form>
         </div>
       </section>
