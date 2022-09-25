@@ -135,12 +135,6 @@ a:active {
 
 /*Icons*/
 
-.icon {
-  text-align: center;
-  font-size: 4.8rem;
-  color: #b3b3b3;
-}
-
 /*Helper Classes*/
 
 .textLeft {
@@ -332,6 +326,12 @@ a:active {
   gap: 4rem;
 }
 
+.section.howItWorks .icon {
+  text-align: center;
+  font-size: 4.8rem;
+  color: #b3b3b3;
+}
+
 /*Section Contact*/
 
 .section.contact {
@@ -410,15 +410,30 @@ a:active {
   text-align: center;
 }
 
+.footerContent {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
 .mainFooter a:link,
 .mainFooter a:visited {
   color: #fff;
 }
 
+.footerSocialNav .navMenu {
+  align-items: center;
+  justify-content: center;
+}
+
+.footerSocialNav .icon {
+  font-size: 2.4rem;
+}
+
 /*Media Queries*/
 
 @media (max-width: 940px) {
-  .navMenu {
+  .mainNav .navMenu {
     display: none;
   }
   .navMenuMobile .icon {
