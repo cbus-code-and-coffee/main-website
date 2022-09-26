@@ -3,6 +3,7 @@
 h1 = 3.815rem
 h2 = 3.052rem
 h3 = 1.953rem
+navLogo = 2.441rem;
 
 */
 
@@ -194,7 +195,7 @@ a:active {
 /*Main Nav Logo*/
 .navLogo:link,
 .navLogo:visited {
-  font-size: 1.953em;
+  font-size: 2.441rem;
   font-weight: 500;
   transition: all 0.3s;
   color: #f36c2a;
@@ -249,11 +250,14 @@ a:active {
 
 .section.hero .sectionHeading {
   font-weight: 500;
+  line-height: 1.5;
   color: #fff;
 }
 
 .section.hero span {
   display: block;
+  font-weight: normal;
+  text-shadow: white 0 0 10px;
 }
 
 /*Main Content*/
@@ -440,6 +444,10 @@ a:active {
     display: inline-block;
     color: #fff;
   }
+  .section.hero .sectionHeading {
+    font-size: 3.01rem;
+  }
+
   .section.principles .cards,
   .section.howItWorks .cards {
     grid-template-columns: 1fr;
