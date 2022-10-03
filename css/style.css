@@ -188,8 +188,7 @@ a:active {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding: 2rem 4rem;
 }
 
 /*Main Nav Logo*/
@@ -233,9 +232,19 @@ a:active {
   color: #fff;
 }
 
-.navMenuMobile .icon {
+.hamburger {
   display: none;
-  font-size: 2.4rem;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 2.5rem;
+  height: 0.3rem;
+  margin: 0.5rem auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #fff;
 }
 
 /*Section Hero*/
@@ -437,17 +446,9 @@ a:active {
 /*Media Queries*/
 
 @media (max-width: 940px) {
-  .mainNav .navMenu {
-    display: none;
-  }
-  .navMenuMobile .icon {
-    display: inline-block;
-    color: #fff;
-  }
   .section.hero .sectionHeading {
     font-size: 3.01rem;
   }
-
   .section.principles .cards,
   .section.howItWorks .cards {
     grid-template-columns: 1fr;
@@ -463,6 +464,36 @@ a:active {
 }
 
 @media (max-width: 740px) {
+  .hamburger {
+    display: block;
+  }
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  .mobile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .mainNav {
+    flex-direction: column;
+    gap: 4rem;
+  }
+  .navMenu {
+    display: none;
+    text-align: center;
+  }
+  .navMenu.active {
+    display: flex;
+    flex-direction: column;
+  }
   .cardHeading {
     text-align: center;
   }
