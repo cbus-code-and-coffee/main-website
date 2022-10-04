@@ -1,7 +1,7 @@
 //Variables
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".navMenu");
-const navItem = document.querySelector(".navItem");
+const navItem = document.querySelectorAll(".navItem");
 
 //Event Listeners / Functions
 hamburger.addEventListener("click", () => {
