@@ -31,7 +31,7 @@ body {
 .container {
   max-width: 120rem;
   margin: 0 auto;
-  padding: 0 4rem;
+  padding: 0 2rem;
 }
 
 /*Images*/
@@ -188,7 +188,8 @@ a:active {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem 4rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 /*Main Nav Logo*/
@@ -502,6 +503,15 @@ a:active {
   }
   .formInfoBox {
     flex-direction: column;
+  }
+  .section {
+    padding: 6rem 0;
+  }
+  .section.hero {
+    padding: 6rem 0;
+  }
+  .section.contact {
+    padding: 6rem 0 2rem;
   }
 }
 
