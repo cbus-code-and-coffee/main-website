@@ -505,7 +505,7 @@ a:active {
     flex-direction: column;
     gap: 4rem;
   }
-  .navMenu {
+  .mainNav .navMenu {
     display: none;
     text-align: center;
   }
