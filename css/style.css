@@ -121,9 +121,17 @@ em {
   color: #fff;
 }
 
+.btn.btn--white:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
 .btn.btn--orange {
-  box-shadow: inset 0 0 0 2px #f36c2a;
+  box-shadow: inset 0 0 0 2px rgb(243, 108, 42);
   color: #f36c2a;
+}
+
+.btn.btn--orange:hover {
+  background-color: rgba(243, 108, 42, 0.1);
 }
 
 /*Paragraphs*/
@@ -234,11 +242,13 @@ a:active {
   color: #fff;
   text-transform: uppercase;
   text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s;
 }
 
 .navLink:hover,
 .navLink:active {
-  color: #fff;
+  border-color: #f36c2a;
 }
 
 .hamburger {
