@@ -257,23 +257,29 @@
             <fieldset class="formInfoBox">
               <fieldset class="formInfo">
                 <label for="name">Name</label>
-                <input type="text" name="name" />
+                <input type="text" name="name" required />
               </fieldset>
               <fieldset class="formInfo">
                 <label for="email">Email</label>
-                <input type="email" name="email" />
+                <input type="email" name="email" required />
               </fieldset>
             </fieldset>
             <fieldset class="formInfoBox">
               <fieldset class="formInfo">
                 <label for="subject">Subject</label>
-                <input type="text" name="subject" />
+                <input type="text" name="subject" required />
               </fieldset>
             </fieldset>
             <fieldset class="formInfoBox">
               <fieldset class="formInfo">
                 <label for="msg">Message</label>
-                <textarea name="msg" id="msg" cols="30" rows="10"></textarea>
+                <textarea
+                  name="msg"
+                  id="msg"
+                  cols="30"
+                  rows="10"
+                  required
+                ></textarea>
               </fieldset>
             </fieldset>
             <button class="btn">Send Message</button>
