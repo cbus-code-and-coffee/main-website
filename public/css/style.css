@@ -364,6 +364,71 @@ a:active {
   color: #b3b3b3;
 }
 
+/*Section Sponsors*/
+
+.section.sponsors {
+  background-color: #eee;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+.section.sponsors .sectionHeading {
+  text-align: center;
+  color: rgb(243, 108, 42);
+}
+
+.section.sponsors .cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4rem;
+  align-items: center;
+  justify-items: center;
+}
+
+.section.sponsors .card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  height: 100%;
+  max-width: 66.6666%;
+  min-width: 66.6666%;
+  border-radius: 5%;
+}
+
+.section.sponsors .cardContent {
+  height: max-content;
+  width: 100%;
+}
+
+.section.sponsors .card a {
+  text-decoration: none;
+}
+
+.section.sponsors h4 {
+  font-size: 5rem;
+  color: #111;
+}
+
+.section.sponsors .actions {
+  text-align: center;
+}
+
+@media (max-width: 650px) {
+  .sponsors .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 350px) {
+  .sponsors .cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+
 /*Section Contact*/
 
 .section.contact {
