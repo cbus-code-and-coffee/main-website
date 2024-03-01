@@ -416,14 +416,18 @@ a:active {
   text-align: center;
 }
 
-@media (max-width: 650px) {
-  .sponsors .cards {
+@media (max-width: 1024px) {
+  .section.sponsors .cards {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .section.sponsors h4 {
+    font-size: 4rem;
   }
 }
 
-@media (max-width: 350px) {
-  .sponsors .cards {
+@media (max-width: 430px) {
+  .section.sponsors .cards {
     grid-template-columns: repeat(1, 1fr);
   }
 }
