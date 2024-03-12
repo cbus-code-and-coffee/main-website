@@ -170,6 +170,7 @@ a:active {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  justify-content: center;
 }
 
 /*Card Media*/
@@ -378,16 +379,16 @@ a:active {
 }
 
 .section.sponsors .cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  /* grid-template-columns: repeat(3, 1fr); */
   gap: 4rem;
   align-items: center;
-  justify-items: center;
+  justify-content: center;
 }
 
-.section.sponsors .lightRoastCards {
+/* .section.sponsors .lightRoastCards {
   grid-template-columns: repeat(1, 1fr);
-}
+} */
 
 .section.sponsors .card {
   display: flex;
@@ -397,12 +398,15 @@ a:active {
   border: 1px solid #ddd;
   padding: 1rem;
   height: 100%;
-  width: 33.3333%;
   border-radius: 5%;
 }
 
+.espressoCards .card {
+  width: 33.3333%;
+}
+
 .lightRoastCards .card {
-  width: 66.6666%;
+  width: 50%;
 }
 
 .section.sponsors .cardContent {
@@ -414,23 +418,28 @@ a:active {
   text-decoration: none;
 }
 
+.section.sponsors .card h4 {
+  font-size: 4rem;
+  text-align: center;
+}
+
 .section.sponsors .actions {
   text-align: center;
 }
 
 @media (max-width: 1024px) {
-  .section.sponsors .cards {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .section.sponsors .lightRoastCards {
-    grid-template-columns: repeat(1, 1fr);
+  .section.sponsors .card h4 {
+    font-size: 2rem;
   }
 } 
 
 @media (max-width: 430px) {
   .section.sponsors .cards {
-    grid-template-columns: repeat(1, 1fr);
+    flex-direction: column;
+  }
+
+  .section.sponsors .card h4 {
+    font-size: 1rem;
   }
   
 }
