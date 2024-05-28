@@ -380,15 +380,10 @@ a:active {
 
 .section.sponsors .cards {
   display: flex;
-  /* grid-template-columns: repeat(3, 1fr); */
   gap: 4rem;
   align-items: center;
   justify-content: center;
 }
-
-/* .section.sponsors .lightRoastCards {
-  grid-template-columns: repeat(1, 1fr);
-} */
 
 .section.sponsors .card {
   display: flex;
@@ -412,6 +407,12 @@ a:active {
 .section.sponsors .cardContent {
   height: max-content;
   width: 100%;
+}
+
+.section.sponsors .cardContent svg {
+  width: 100%;
+  height: auto;
+  padding: 0.1rem;
 }
 
 .section.sponsors .card a {
