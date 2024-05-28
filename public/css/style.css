@@ -410,8 +410,9 @@ a:active {
 }
 
 .section.sponsors .cardContent svg {
-  height: max-content;
   width: 100%;
+  height: auto;
+  padding: 0.1rem;
 }
 
 .section.sponsors .card a {
